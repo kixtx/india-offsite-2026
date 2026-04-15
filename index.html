@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>India Offsite 2026 — Bangkok, Thailand</title>
+  <title>Nirvana India Offsite April 2026 — Bangkok, Thailand</title>
   <link rel="stylesheet" href="https://nirvana-blobs.fly.storage.tigris.dev/design-assets/nirvana-brand.css"/>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
@@ -11,18 +11,18 @@
     .site-header{background:var(--n-dark-navy,#040C21);color:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.35)}
     .site-header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:62px;padding:0 1.5rem}
     .site-title{font-size:1rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:.6rem;cursor:pointer;text-decoration:none}
-    .site-title .flag{font-size:1.3rem}
     .nav-tabs{display:flex;list-style:none;height:62px;margin:0;padding:0}
     .nav-tabs a{display:flex;align-items:center;height:100%;padding:0 1.1rem;color:rgba(255,255,255,.7);text-decoration:none;font-size:.82rem;font-weight:500;border-bottom:3px solid transparent;transition:all .2s;cursor:pointer;white-space:nowrap}
     .nav-tabs a:hover,.nav-tabs a.active{color:var(--n-yellow,#F9AE39);border-bottom-color:var(--n-yellow,#F9AE39);background:rgba(255,255,255,.04)}
     .page{display:none}.page.active{display:block}
-    .hero{position:relative;height:460px;background:linear-gradient(rgba(4,12,33,.5),rgba(4,12,33,.72)),url('https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=1600&q=80') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+    .hero{height:460px;background:linear-gradient(rgba(4,12,33,.45),rgba(4,12,33,.68)),url('https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161456560-Spirited-Puddle-Jumper-blog-post-images-2025-03-06T091757.968.png') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
     .hero-content{padding:2rem}
     .hero-badge{display:inline-block;background:var(--n-yellow,#F9AE39);color:var(--n-dark-navy,#040C21);padding:.3rem 1rem;border-radius:100px;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem}
-    .hero h1{font-size:3.4rem;font-weight:800;line-height:1.1;margin-bottom:.4rem;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+    .hero h1{font-size:3.2rem;font-weight:800;line-height:1.1;margin-bottom:.4rem;text-shadow:0 2px 14px rgba(0,0,0,.45)}
     .hero h2{font-size:1.3rem;font-weight:400;opacity:.88;margin-bottom:1.75rem}
     .hero-meta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
     .hero-chip{display:flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.14);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.22);padding:.45rem .95rem;border-radius:100px;font-size:.82rem;font-weight:500}
+    .hero-chip a{color:#fff;text-decoration:none}
     .content{max-width:1080px;margin:0 auto;padding:2.5rem 1.5rem}
     .section-title{font-size:1.65rem;font-weight:700;color:var(--n-dark-navy,#040C21);margin-bottom:.4rem}
     .section-sub{color:#777;font-size:.92rem;margin-bottom:2rem}
@@ -34,67 +34,75 @@
     .welcome-box{background:linear-gradient(135deg,var(--n-dark-navy,#040C21) 0%,#082040 100%);color:#fff;border-radius:16px;padding:2.25rem 2.5rem;margin-bottom:2.5rem}
     .welcome-box h3{font-size:1.15rem;font-weight:700;color:var(--n-yellow,#F9AE39);margin-bottom:.85rem}
     .welcome-box p{line-height:1.75;opacity:.88;font-size:.9rem}.welcome-box p+p{margin-top:.6rem}
-    .pin-badge{background:linear-gradient(135deg,#002d5c,#0a2a5e);color:#fff;border-radius:16px;padding:1.75rem 2rem;display:flex;gap:1.5rem;align-items:center;margin-bottom:2.5rem}
-    .pin-icon{font-size:2.75rem;flex-shrink:0}
-    .pin-badge h3{font-size:1.05rem;font-weight:700;color:var(--n-yellow,#F9AE39);margin-bottom:.45rem}
-    .pin-badge p{font-size:.85rem;opacity:.87;line-height:1.65}
     .day-block{background:#fff;border-radius:16px;border:1px solid #e4e8f0;box-shadow:0 1px 5px rgba(0,0,0,.05);overflow:hidden;margin-bottom:1.5rem}
     .day-header{background:var(--n-navy,#003366);color:#fff;padding:1.15rem 1.75rem;display:flex;align-items:center;justify-content:space-between}
-    .day-header .dnum{font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.65;margin-bottom:.1rem}
-    .day-header .dname{font-size:1.1rem;font-weight:700}
-    .day-header .ddate{font-size:.82rem;opacity:.75;margin-top:.1rem}
+    .dnum{font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.65;margin-bottom:.1rem}
+    .dname{font-size:1.1rem;font-weight:700}
+    .ddate{font-size:.82rem;opacity:.75;margin-top:.1rem}
     .day-theme{background:var(--n-yellow,#F9AE39);color:var(--n-dark-navy,#040C21);padding:.22rem .8rem;border-radius:100px;font-size:.72rem;font-weight:800;flex-shrink:0}
     .day-events{padding:1.25rem 1.75rem}
     .event-item{display:flex;gap:1.25rem;padding:.65rem 0;border-bottom:1px solid #f0f2f6}
     .event-item:last-child{border-bottom:none}
-    .event-time{min-width:78px;font-size:.75rem;font-weight:600;color:var(--n-navy,#003366);padding-top:.05rem}
+    .event-time{min-width:88px;font-size:.75rem;font-weight:600;color:var(--n-navy,#003366);padding-top:.05rem}
     .event-name{font-size:.88rem;font-weight:600;color:#1a1a2e}
+    .event-name a{color:var(--n-navy,#003366);text-decoration:none;border-bottom:1px solid rgba(0,51,102,.2)}
     .event-desc{font-size:.78rem;color:#999;margin-top:.12rem}
-    .event-hl{background:linear-gradient(135deg,#fffbee,#fff5d0);border-left:3px solid var(--n-yellow,#F9AE39);border-radius:0 8px 8px 0;padding:.7rem 1rem;margin:.5rem 0;flex:1}
-    .event-hl .event-name{color:#7a5500}
-    .event-hl .event-desc{color:#9a7010}
+    .event-desc a{color:var(--n-navy,#003366);font-weight:500}
+    .event-hl{background:linear-gradient(135deg,#fff3e0,#ffe0b2);border-left:3px solid #E86A36;border-radius:0 8px 8px 0;padding:.7rem 1rem;margin:.5rem 0;flex:1}
+    .event-hl .event-name{color:#7a3500}
+    .event-hl .event-name a{color:#7a3500;border-bottom-color:rgba(122,53,0,.3)}
+    .event-hl .event-desc{color:#9a5010}
     .travel-section{background:#fff;border-radius:16px;border:1px solid #e4e8f0;padding:1.75rem;margin-bottom:1.5rem;box-shadow:0 1px 5px rgba(0,0,0,.05)}
-    .travel-section h3{font-size:1rem;font-weight:700;color:var(--n-dark-navy,#040C21);margin-bottom:1.1rem;display:flex;align-items:center;gap:.5rem}
-    .flight-card{background:linear-gradient(135deg,var(--n-navy,#003366),#0a2a5e);color:#fff;border-radius:12px;padding:1.5rem;margin-bottom:1.1rem}
-    .flight-meta{font-size:.7rem;opacity:.65;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem}
-    .flight-row{display:flex;align-items:center;justify-content:space-between;gap:1rem}
-    .fcity{text-align:center}.fcity .code{font-size:1.8rem;font-weight:800}.fcity .cname{font-size:.7rem;opacity:.65;margin-top:.1rem}.fcity .ftime{font-size:1rem;font-weight:600;margin-top:.2rem}
-    .fline{flex:1;text-align:center}.fline .fnum{font-size:.72rem;opacity:.7;margin-bottom:.25rem}.fline .line{height:1px;background:rgba(255,255,255,.3);position:relative}.fline .line::after{content:'✈';position:absolute;top:-.65rem;left:50%;transform:translateX(-50%);font-size:.95rem}.fline .fdur{font-size:.7rem;opacity:.65;margin-top:.25rem}
+    .travel-section h3{font-size:1rem;font-weight:700;color:var(--n-dark-navy,#040C21);margin-bottom:1.1rem}
     .alert-box{border-radius:10px;padding:.9rem 1.1rem;font-size:.85rem;display:flex;gap:.75rem;align-items:flex-start;margin-bottom:1rem}
     .alert-warn{background:#fff9e6;border:1px solid #ffd76b;color:#7a5500}
     .alert-ok{background:#e8faf0;border:1px solid #6ddca2;color:#1a5c38}
+    .alert-info{background:#e8f0fe;border:1px solid #93b4f7;color:#1a3a7a}
     .alert-icon{font-size:1rem;flex-shrink:0;margin-top:.05rem}
     .info-list{list-style:none;padding:0}
     .info-list li{padding:.55rem 0;border-bottom:1px solid #f3f4f8;font-size:.875rem;display:flex;gap:.5rem}
     .info-list li:last-child{border-bottom:none}
     .info-list li strong{color:var(--n-dark-navy,#040C21);min-width:165px;flex-shrink:0}
-    .venue-hero{background:linear-gradient(rgba(4,12,33,.38),rgba(4,12,33,.62)),url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80') center/cover no-repeat;height:240px;border-radius:16px;display:flex;align-items:flex-end;padding:1.75rem;color:#fff;margin-bottom:2rem}
+    .info-list a{color:var(--n-navy,#003366);font-weight:600}
+    .venue-hero{background:linear-gradient(rgba(4,12,33,.3),rgba(4,12,33,.58)),url('https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161448208-pool-area.jpg') center/cover no-repeat;height:240px;border-radius:16px;display:flex;align-items:flex-end;padding:1.75rem;color:#fff;margin-bottom:2rem}
     .venue-hero h2{font-size:1.65rem;font-weight:800;text-shadow:0 2px 8px rgba(0,0,0,.4)}
     .venue-hero p{opacity:.82;font-size:.9rem;margin-top:.2rem}
+    .venue-hero a{color:rgba(255,255,255,.85);text-decoration:underline}
+    .venue-visual{display:grid;grid-template-columns:1fr 2fr;gap:1rem;margin-bottom:1.5rem;align-items:stretch}
+    .venue-photos{display:flex;flex-direction:column;gap:1rem}
+    .venue-map-wrap{border-radius:16px;overflow:hidden;border:1px solid #e4e8f0;box-shadow:0 1px 5px rgba(0,0,0,.05);min-height:420px}
+    .venue-map-wrap iframe{width:100%;height:100%;min-height:420px;border:none;display:block}
+    .photo-caption{font-size:.72rem;color:#999;text-align:center;margin-top:.3rem}
+    .photo-wrap{position:relative}
+    .photo-wrap a.photo-link{display:block;border-radius:12px;overflow:hidden;text-decoration:none}
+    .photo-wrap a.photo-link img{width:100%;height:200px;object-fit:cover;display:block;transition:transform .25s}
+    .photo-wrap a.photo-link:hover img{transform:scale(1.03)}
+    .photo-wrap .map-pin{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.55);color:#fff;font-size:.68rem;padding:.2rem .5rem;border-radius:100px;backdrop-filter:blur(4px)}
+    .photo-grid-4{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.5rem}
     .packing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.25rem}
     .packing-card{background:#fff;border-radius:12px;border:1px solid #e4e8f0;padding:1.5rem;box-shadow:0 1px 5px rgba(0,0,0,.05)}
-    .packing-card h3{font-size:.9rem;font-weight:700;color:var(--n-dark-navy,#040C21);margin-bottom:.9rem;display:flex;align-items:center;gap:.4rem}
+    .packing-card h3{font-size:.9rem;font-weight:700;color:var(--n-dark-navy,#040C21);margin-bottom:.9rem}
     .packing-card ul{list-style:none;padding:0}
     .packing-card ul li{padding:.4rem 0;font-size:.84rem;color:#444;border-bottom:1px solid #f4f5f9;display:flex;align-items:flex-start;gap:.6rem}
     .packing-card ul li:last-child{border-bottom:none}
     .packing-card ul li::before{content:'';min-width:16px;height:16px;border:2px solid #cdd0d9;border-radius:3px;flex-shrink:0;margin-top:.1rem}
-    .faq-item{background:#fff;border-radius:12px;border:1px solid #e4e8f0;margin-bottom:.75rem;overflow:hidden;box-shadow:0 1px 5px rgba(0,0,0,.05)}
-    .faq-q{padding:1.1rem 1.4rem;font-size:.88rem;font-weight:600;color:var(--n-dark-navy,#040C21);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;gap:.75rem}
-    .faq-q:hover{background:#fafbfe}
-    .arrow{transition:transform .22s;color:#003366;font-size:.7rem;flex-shrink:0}
-    .faq-q.open .arrow{transform:rotate(180deg)}
-    .faq-a{display:none;padding:0 1.4rem 1.1rem;font-size:.85rem;color:#555;line-height:1.75;border-top:1px solid #f0f2f8}
-    .faq-a.open{display:block}
+    .faq-item{background:#fff;border-radius:12px;border:1px solid #e4e8f0;margin-bottom:.75rem;padding:1.35rem 1.5rem;box-shadow:0 1px 5px rgba(0,0,0,.05)}
+    .faq-q{font-size:.92rem;font-weight:700;color:var(--n-dark-navy,#040C21);margin-bottom:.65rem;padding-bottom:.65rem;border-bottom:1px solid #f0f2f8}
+    .faq-a{font-size:.86rem;color:#555;line-height:1.8;margin:0;padding:0}
     .faq-a a{color:var(--n-navy,#003366);font-weight:600}
+    .hotel-link{color:var(--n-navy,#003366);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(0,51,102,.25)}
     footer{background:var(--n-dark-navy,#040C21);color:rgba(255,255,255,.45);text-align:center;padding:2rem 1rem;font-size:.78rem;margin-top:4rem}
     footer strong{color:rgba(255,255,255,.82)}
+    footer a{color:rgba(255,255,255,.65);text-decoration:underline}
     footer p+p{margin-top:.4rem}
     @media(max-width:768px){
-      .hero h1{font-size:2.4rem}
+      .hero h1{font-size:2.2rem}
       .site-header-inner{flex-wrap:wrap;height:auto;padding:.5rem 1rem;gap:.25rem}
       .nav-tabs{overflow-x:auto;width:100%}
       .nav-tabs a{padding:0 .75rem;font-size:.78rem}
       .content{padding:1.75rem 1rem}
+      .venue-visual{grid-template-columns:1fr}
+      .photo-grid-4{grid-template-columns:1fr 1fr}
     }
   </style>
 </head>
@@ -102,10 +110,7 @@
 
 <header class="site-header">
   <div class="site-header-inner">
-    <a class="site-title" onclick="showPage('home')">
-      <span class="flag">&#127481;&#127469;</span>
-      India Offsite 2026
-    </a>
+    <a class="site-title" onclick="showPage('home')">&#127481;&#127469; Nirvana India Offsite April 2026</a>
     <nav><ul class="nav-tabs">
       <li><a id="tab-home" class="active" onclick="showPage('home')">Home</a></li>
       <li><a id="tab-schedule" onclick="showPage('schedule')">Schedule</a></li>
@@ -122,43 +127,33 @@
   <div class="hero">
     <div class="hero-content">
       <div class="hero-badge">Nirvana India Team</div>
-      <h1>India Offsite 2026</h1>
+      <h1>Nirvana India Offsite April 2026</h1>
       <h2>Bangkok, Thailand &#127481;&#127469;</h2>
       <div class="hero-meta">
         <div class="hero-chip">&#128197; April 27&ndash;30, 2026</div>
-        <div class="hero-chip">&#127968; NH Bangkok Boulevard Sukhumvit</div>
-        <div class="hero-chip">&#9992;&#65039; 4 Days Together</div>
+        <div class="hero-chip">&#127968; <a href="https://www.google.com/maps/search/NH+Bangkok+Boulevard+Sukhumvit,+Bangkok" target="_blank">NH Bangkok Boulevard Sukhumvit</a></div>
+        <div class="hero-chip">&#9992; 4 Days Together</div>
       </div>
     </div>
   </div>
   <div class="content">
     <div class="welcome-box">
       <h3>Welcome to Bangkok! &#127817;</h3>
-      <p>We&rsquo;re thrilled to be heading to Bangkok, Thailand for this year&rsquo;s India team offsite &mdash; four days of sessions, team building, the Pinnacle Awards, and exploring one of Southeast Asia&rsquo;s most vibrant cities together.</p>
-      <p>Bangkok was chosen for its excellent connectivity from Indian cities, world-class hospitality, and the perfect blend of culture, energy, and great food. It checked every box &mdash; and we can&rsquo;t wait to experience it as a team.</p>
+      <p>We&rsquo;re thrilled to be heading to Bangkok, Thailand for the India team April offsite &mdash; four days of sessions, team building, and exploring one of Southeast Asia&rsquo;s most vibrant cities together.</p>
+      <p>Bangkok was chosen for its excellent connectivity from Indian cities, world-class hospitality, and the perfect blend of culture, energy, and great food. We can&rsquo;t wait to experience it as a team.</p>
     </div>
-    <div class="info-grid">
+    <div class="info-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
       <div class="info-card"><div class="icon">&#128197;</div><div class="lbl">Dates</div><div class="val">April 27&ndash;30, 2026</div></div>
       <div class="info-card"><div class="icon">&#128205;</div><div class="lbl">City</div><div class="val">Bangkok, Thailand</div></div>
-      <div class="info-card"><div class="icon">&#127968;</div><div class="lbl">Hotel</div><div class="val">NH Bangkok Boulevard Sukhumvit</div></div>
-      <div class="info-card"><div class="icon">&#9992;&#65039;</div><div class="lbl">Recommended Flight</div><div class="val">Air India Express IX&nbsp;882</div></div>
-      <div class="info-card"><div class="icon">&#128176;</div><div class="lbl">Flight Budget</div><div class="val">INR 30,000&ndash;31,000 RT</div></div>
-      <div class="info-card"><div class="icon">&#127942;</div><div class="lbl">Special Event</div><div class="val">Pinnacle Awards Ceremony</div></div>
-    </div>
-    <div class="pin-badge">
-      <div class="pin-icon">&#128205;</div>
-      <div>
-        <h3>Bangkok Miles Pin</h3>
-        <p>Every offsite attendee receives the exclusive <strong style="color:#F9AE39">Bangkok Miles commemorative pin</strong> &mdash; given only to those who make the trip. A keepsake of our time together in Thailand. Anniversary pins will also be distributed; extras brought back for those who couldn&rsquo;t join. &#127885;</p>
-      </div>
+      <div class="info-card"><div class="icon">&#127968;</div><div class="lbl">Hotel</div><div class="val"><a href="https://www.google.com/maps/search/NH+Bangkok+Boulevard+Sukhumvit,+Bangkok" target="_blank" class="hotel-link">NH Bangkok Boulevard Sukhumvit</a></div></div>
     </div>
     <h2 class="section-title">What&rsquo;s Happening</h2>
     <p class="section-sub">A snapshot of the four days ahead</p>
     <div class="info-grid" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))">
-      <div class="info-card"><div class="icon">&#128747;&#65039;</div><div class="lbl">Day 1 &middot; April 27</div><div class="val">Arrival &amp; Welcome Dinner</div></div>
-      <div class="info-card"><div class="icon">&#128161;</div><div class="lbl">Day 2 &middot; April 28</div><div class="val">Sessions + Pinnacle Awards</div></div>
-      <div class="info-card"><div class="icon">&#128506;&#65039;</div><div class="lbl">Day 3 &middot; April 29</div><div class="val">Sessions + Bangkok City Tour</div></div>
-      <div class="info-card"><div class="icon">&#128748;&#65039;</div><div class="lbl">Day 4 &middot; April 30</div><div class="val">Breakfast &amp; Checkout</div></div>
+      <div class="info-card"><div class="icon">&#128747;</div><div class="lbl">Day 1 &middot; April 27</div><div class="val">Arrival &amp; Welcome Dinner</div></div>
+      <div class="info-card"><div class="icon">&#128161;</div><div class="lbl">Day 2 &middot; April 28</div><div class="val">Sessions + Pizza &amp; Beer</div></div>
+      <div class="info-card"><div class="icon">&#128506;</div><div class="lbl">Day 3 &middot; April 29</div><div class="val">Sessions + City Exploration Day</div></div>
+      <div class="info-card"><div class="icon">&#128748;</div><div class="lbl">Day 4 &middot; April 30</div><div class="val">Breakfast &amp; Checkout</div></div>
     </div>
   </div>
 </div>
@@ -169,53 +164,38 @@
     <h2 class="section-title">Schedule</h2>
     <p class="section-sub">April 27&ndash;30, 2026 &middot; Bangkok, Thailand</p>
     <div class="day-block">
-      <div class="day-header">
-        <div><div class="dnum">Day 1</div><div class="dname">Monday, April 27</div><div class="ddate">Arrival Day</div></div>
-        <div class="day-theme">&#128747;&#65039; Arrival</div>
-      </div>
+      <div class="day-header"><div><div class="dnum">Day 1</div><div class="dname">Monday, April 27</div><div class="ddate">Arrival Day</div></div><div class="day-theme">&#128747; Arrival</div></div>
       <div class="day-events">
-        <div class="event-item"><div class="event-time">~10:00 AM</div><div><div class="event-name">Depart India</div><div class="event-desc">Air India Express IX&nbsp;882 &mdash; recommended group flight departing 10:00 AM IST</div></div></div>
-        <div class="event-item"><div class="event-time">~4:00 PM</div><div><div class="event-name">Arrive Bangkok (BKK)</div><div class="event-desc">Suvarnabhumi International Airport &middot; Airport pickup coordinated by Kirti</div></div></div>
-        <div class="event-item"><div class="event-time">~5:00 PM</div><div><div class="event-name">Transfer to Hotel</div><div class="event-desc">Group transfer to NH Bangkok Boulevard Sukhumvit</div></div></div>
-        <div class="event-item"><div class="event-time">~7:30 PM</div><div><div class="event-name">Hotel Check-in</div><div class="event-desc">Twin-sharing rooms &middot; Check-in opens from 3:00 PM</div></div></div>
+        <div class="event-item"><div class="event-time">Afternoon</div><div><div class="event-name">Arrive <a href="https://www.google.com/maps/search/Suvarnabhumi+Airport+Bangkok" target="_blank">Bangkok (BKK)</a></div><div class="event-desc">Suvarnabhumi International Airport &middot; Self-book your Grab / cab to the hotel</div></div></div>
+        <div class="event-item"><div class="event-time">3:00 PM+</div><div><div class="event-name">Hotel Check-in</div><div class="event-desc"><a href="https://www.google.com/maps/search/NH+Bangkok+Boulevard+Sukhumvit,+Bangkok" target="_blank">NH Bangkok Boulevard Sukhumvit</a>, Sukhumvit Soi 5, Khlong Toei Nuea, Watthana, Bangkok 10110 &middot; Twin-sharing rooms</div></div></div>
         <div class="event-item"><div class="event-time">Evening</div><div><div class="event-name">Welcome Dinner</div><div class="event-desc">At the hotel property &middot; Small activity after dinner</div></div></div>
       </div>
     </div>
     <div class="day-block">
-      <div class="day-header">
-        <div><div class="dnum">Day 2</div><div class="dname">Tuesday, April 28</div><div class="ddate">Sessions Day</div></div>
-        <div class="day-theme">&#128161; Sessions + Awards</div>
-      </div>
+      <div class="day-header"><div><div class="dnum">Day 2</div><div class="dname">Tuesday, April 28</div><div class="ddate">Sessions Day</div></div><div class="day-theme">&#128161; Sessions + Pizza &amp; Beer</div></div>
       <div class="day-events">
         <div class="event-item"><div class="event-time">8:00 AM</div><div><div class="event-name">Breakfast</div></div></div>
-        <div class="event-item"><div class="event-time">9:00 AM</div><div><div class="event-name">Morning Sessions Block</div><div class="event-desc">Strategy deep dives &middot; Knowledge sharing &middot; Cross-team workshops</div></div></div>
-        <div class="event-item"><div class="event-time">1:00 PM</div><div><div class="event-name">Lunch</div></div></div>
-        <div class="event-item"><div class="event-time">2:30 PM</div><div><div class="event-name">Afternoon Sessions + Team Building</div><div class="event-desc">Interactive sessions &middot; Team building activity</div></div></div>
-        <div class="event-item" style="align-items:flex-start"><div class="event-time" style="padding-top:.7rem;color:#7a5500">Evening</div><div class="event-hl"><div class="event-name">&#127942; Pinnacle Awards Ceremony</div><div class="event-desc">Celebrating excellence across the India team &middot; Special recognition for top performers</div></div></div>
-        <div class="event-item"><div class="event-time">Night</div><div><div class="event-name">Dinner at Hotel</div></div></div>
+        <div class="event-item"><div class="event-time">9:45 AM</div><div><div class="event-name">Morning Sessions Block</div><div class="event-desc">Strategy deep dives &middot; Knowledge sharing &middot; Cross-team workshops</div></div></div>
+        <div class="event-item"><div class="event-time">1:00&ndash;3:00 PM</div><div><div class="event-name">Lunch at the Hotel</div></div></div>
+        <div class="event-item"><div class="event-time">3:00 PM</div><div><div class="event-name">Afternoon Sessions + Team Building</div><div class="event-desc">Interactive sessions &middot; Team building activity</div></div></div>
+        <div class="event-item" style="align-items:flex-start"><div class="event-time" style="padding-top:.7rem;color:#7a3500">Evening</div><div class="event-hl"><div class="event-name">&#127829;&#127866; Dinner at <a href="https://www.google.com/maps/search/Tony's+Restaurant+Bangkok+Sukhumvit" target="_blank">Tony&rsquo;s</a></div><div class="event-desc">Pizza &amp; beer night</div></div></div>
       </div>
     </div>
     <div class="day-block">
-      <div class="day-header">
-        <div><div class="dnum">Day 3</div><div class="dname">Wednesday, April 29</div><div class="ddate">City Exploration Day</div></div>
-        <div class="day-theme">&#128506;&#65039; City Tour</div>
-      </div>
+      <div class="day-header"><div><div class="dnum">Day 3</div><div class="dname">Wednesday, April 29</div><div class="ddate">City Exploration Day</div></div><div class="day-theme">&#128506; Sessions + City Exploration</div></div>
       <div class="day-events">
         <div class="event-item"><div class="event-time">8:00 AM</div><div><div class="event-name">Breakfast</div></div></div>
-        <div class="event-item"><div class="event-time">9:00 AM</div><div><div class="event-name">Morning Sessions Block</div><div class="event-desc">Strategy &amp; knowledge sharing sessions continue</div></div></div>
-        <div class="event-item"><div class="event-time">1:00 PM</div><div><div class="event-name">Lunch</div></div></div>
-        <div class="event-item"><div class="event-time">3:00 PM</div><div><div class="event-name">Bangkok City Tour</div><div class="event-desc">Explore Bangkok&rsquo;s iconic landmarks &amp; sights together &middot; Locations TBC</div></div></div>
-        <div class="event-item"><div class="event-time">Evening</div><div><div class="event-name">Dinner at Escape</div><div class="event-desc">Private venue &middot; Food, live music &amp; great vibes to close out the offsite &#127882;</div></div></div>
+        <div class="event-item"><div class="event-time">9:45 AM</div><div><div class="event-name">Morning Sessions Block</div><div class="event-desc">Strategy &amp; knowledge sharing sessions continue</div></div></div>
+        <div class="event-item"><div class="event-time">1:00&ndash;3:00 PM</div><div><div class="event-name">Lunch at the Hotel</div></div></div>
+        <div class="event-item"><div class="event-time">3:00 PM</div><div><div class="event-name">Bangkok City Tour</div><div class="event-desc"><a href="https://www.google.com/maps/search/Wat+Arun+Bangkok" target="_blank">Wat Arun</a> &middot; <a href="https://www.google.com/maps/search/Yaowarat+Chinatown+Bangkok" target="_blank">Chinatown (Yaowarat)</a> &middot; <a href="https://www.google.com/maps/search/Grand+Palace+Bangkok" target="_blank">Grand Palace</a></div></div></div>
+        <div class="event-item" style="align-items:flex-start"><div class="event-time" style="padding-top:.7rem;color:#7a3500">Evening</div><div class="event-hl"><div class="event-name">&#127882; Dinner at <a href="https://www.google.com/maps/search/Escape+Bangkok" target="_blank">Escape</a></div><div class="event-desc">Private venue &middot; Food, live music &amp; great vibes</div></div></div>
       </div>
     </div>
     <div class="day-block">
-      <div class="day-header">
-        <div><div class="dnum">Day 4</div><div class="dname">Thursday, April 30</div><div class="ddate">Departure Day</div></div>
-        <div class="day-theme">&#128748;&#65039; Departure</div>
-      </div>
+      <div class="day-header"><div><div class="dnum">Day 4</div><div class="dname">Thursday, April 30</div><div class="ddate">Departure Day</div></div><div class="day-theme">&#128748; Departure</div></div>
       <div class="day-events">
         <div class="event-item"><div class="event-time">Morning</div><div><div class="event-name">Breakfast</div></div></div>
-        <div class="event-item"><div class="event-time">By 12:00 PM</div><div><div class="event-name">Hotel Checkout</div><div class="event-desc">Thank you for an incredible offsite! Safe travels home &#9992;&#65039;</div></div></div>
+        <div class="event-item"><div class="event-time">By 11:00 AM</div><div><div class="event-name">Hotel Checkout</div><div class="event-desc">Thank you for an incredible offsite! Safe travels &#9992;</div></div></div>
       </div>
     </div>
   </div>
@@ -226,49 +206,25 @@
   <div class="content">
     <h2 class="section-title">Travel Information</h2>
     <p class="section-sub">Everything you need to get to Bangkok</p>
-    <div class="travel-section">
-      <h3>&#9992;&#65039; Recommended Flight</h3>
-      <div class="flight-card">
-        <div class="flight-meta">Air India Express &middot; Recommended Group Flight</div>
-        <div class="flight-row">
-          <div class="fcity"><div class="code">IND</div><div class="cname">Any Indian City</div><div class="ftime">10:00 AM IST</div></div>
-          <div class="fline"><div class="fnum">IX&nbsp;882</div><div class="line"></div><div class="fdur">~4.5 hrs</div></div>
-          <div class="fcity"><div class="code">BKK</div><div class="cname">Suvarnabhumi Airport</div><div class="ftime">~4:00 PM ICT</div></div>
-        </div>
-      </div>
-      <ul class="info-list">
-        <li><strong>Flight Budget</strong> INR 30,000&ndash;31,000 round trip per person</li>
-        <li><strong>Booking</strong> Book your own ticket &mdash; outbound from any Indian city to Bangkok</li>
-        <li><strong>Return</strong> Bangkok &rarr; any Indian city on April 30</li>
-        <li><strong>Reimbursement</strong> Submit individually; processed in batch ~April&nbsp;20</li>
-        <li><strong>Tip</strong> Take IX&nbsp;882 to arrive with the group!</li>
-      </ul>
-    </div>
+    <div class="travel-section"><h3>&#9992; Flights</h3><div class="alert-box alert-info"><div class="alert-icon">&#128161;</div><div>Book your own outbound flights from any Indian city to Bangkok. Return flights are fully flexible &mdash; no specific city or date required. Feel free to plan onward travel after the offsite if you&rsquo;d like!</div></div></div>
     <div class="travel-section">
       <h3>&#128203; Thailand Digital Arrival Card (TDAC)</h3>
-      <div class="alert-box alert-warn">
-        <div class="alert-icon">&#9888;&#65039;</div>
-        <div><strong>Mandatory for all visitors to Thailand.</strong> Fill this out after booking your flight. All details must match your passport exactly. Download or print the confirmation to show at immigration on arrival.</div>
-      </div>
+      <div class="alert-box alert-warn"><div class="alert-icon">&#9888;</div><div><strong>Mandatory for all visitors to Thailand.</strong> Fill this out after booking your flight. Details must match your passport exactly. Download or print the confirmation to show at immigration.</div></div>
       <ul class="info-list">
-        <li><strong>Link</strong><a href="https://tdac.immigration.go.th/arrival-card/#/tac/arrival-card/add" target="_blank" style="color:var(--n-navy,#003366);font-weight:600">tdac.immigration.go.th &#8594;</a></li>
+        <li><strong>Link</strong> <a href="https://tdac.immigration.go.th/arrival-card/#/tac/arrival-card/add" target="_blank">tdac.immigration.go.th &rarr;</a></li>
         <li><strong>When to fill</strong> After booking your flight (use exact passport details)</li>
         <li><strong>What to bring</strong> Save confirmation on phone + print a copy</li>
       </ul>
     </div>
+    <div class="travel-section"><h3>&#128706; Visa</h3><div class="alert-box alert-ok"><div class="alert-icon">&#9989;</div><div><strong>Indian nationals enter Thailand visa-free for up to 30 days</strong> (updated 2024 policy). Ensure your passport is valid for at least 6 months from April 27, 2026.</div></div></div>
     <div class="travel-section">
-      <h3>&#128706; Visa</h3>
-      <div class="alert-box alert-ok">
-        <div class="alert-icon">&#9989;</div>
-        <div><strong>Indian nationals enter Thailand visa-free for up to 30 days</strong> (updated 2024 policy). Ensure your passport is valid for at least 6 months from April 27, 2026.</div>
-      </div>
-    </div>
-    <div class="travel-section">
-      <h3>&#128653; Airport Pickup</h3>
+      <h3>&#128663; Getting to the Hotel</h3>
+      <div class="alert-box alert-info" style="margin-bottom:1rem"><div class="alert-icon">&#128661;</div><div>Please arrange your own transfer from the airport. You can use your <strong>monthly commuter budget</strong> for this.</div></div>
       <ul class="info-list">
-        <li><strong>Pickup arranged</strong> Group transfer from Suvarnabhumi Airport (BKK)</li>
-        <li><strong>Action required</strong> Share your exact arrival time + terminal with Kirti on Slack</li>
-        <li><strong>Airport</strong> Suvarnabhumi International Airport (BKK) &mdash; main Bangkok airport</li>
+        <li><strong>Options</strong> <a href="https://www.grab.com" target="_blank">Grab</a> (app-based), metered taxi, or prebook a cab</li>
+        <li><strong>Airport</strong> <a href="https://www.google.com/maps/search/Suvarnabhumi+Airport+Bangkok" target="_blank">Suvarnabhumi International Airport (BKK)</a></li>
+        <li><strong>Journey time</strong> ~45 min to Sukhumvit depending on traffic</li>
+        <li><strong>Hotel</strong> <a href="https://www.google.com/maps/search/NH+Bangkok+Boulevard+Sukhumvit,+Bangkok" target="_blank">NH Bangkok Boulevard Sukhumvit</a>, Sukhumvit Soi 5, Khlong Toei Nuea, Watthana, Bangkok 10110</li>
       </ul>
     </div>
   </div>
@@ -281,28 +237,46 @@
     <p class="section-sub">Our home for the offsite</p>
     <div class="venue-hero">
       <div>
-        <h2>NH Bangkok Boulevard Sukhumvit</h2>
-        <p>Sukhumvit &middot; Bangkok, Thailand</p>
+        <h2><a href="https://www.google.com/maps/search/NH+Bangkok+Boulevard+Sukhumvit,+Bangkok" target="_blank" style="color:#fff;text-decoration:none">NH Bangkok Boulevard Sukhumvit</a></h2>
+        <p>Sukhumvit Soi 5, Khlong Toei Nuea, Watthana, Bangkok 10110 &middot; <a href="https://www.google.com/maps/search/NH+Bangkok+Boulevard+Sukhumvit,+Bangkok" target="_blank">View on Google Maps &rarr;</a></p>
+      </div>
+    </div>
+    <div class="venue-visual">
+      <div class="venue-photos">
+        <div><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161444859-592278073.jpg" alt="Twin room" loading="lazy" style="width:100%;height:200px;object-fit:cover;border-radius:12px;border:1px solid #e4e8f0"/><div class="photo-caption">Twin room with city view</div></div>
+        <div><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161448208-pool-area.jpg" alt="Pool" loading="lazy" style="width:100%;height:200px;object-fit:cover;border-radius:12px;border:1px solid #e4e8f0"/><div class="photo-caption">Pool &amp; Bangkok skyline</div></div>
+      </div>
+      <div class="venue-map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7!2d100.5609!3d13.7400!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ece4c89c20d%3A0x2e4a8c7b2c7d7e1f!2sNH+Bangkok+Boulevard+Sukhumvit!5e0!3m2!1sen!2sth!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="NH Bangkok Boulevard Sukhumvit"></iframe>
+      </div>
+    </div>
+    <div class="travel-section">
+      <h3>&#127749; Bangkok — Places to Explore</h3>
+      <div class="photo-grid-4">
+        <div class="photo-wrap"><a href="https://www.google.com/maps/search/Yaowarat+Chinatown+Bangkok" target="_blank" class="photo-link"><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161460323-bangkok_chinatown_blog-001.jpg" alt="Bangkok Chinatown" loading="lazy"/></a><div class="map-pin">&#128205; Chinatown</div><div class="photo-caption"><a href="https://www.google.com/maps/search/Yaowarat+Chinatown+Bangkok" target="_blank" style="color:var(--n-navy,#003366)">Bangkok Chinatown (Yaowarat) &rarr;</a></div></div>
+        <div class="photo-wrap"><a href="https://www.google.com/maps/search/Yaowarat+Street+Food+Bangkok" target="_blank" class="photo-link"><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161464959-a-chefs-tour-best-food-tour-bangkok.jpeg.webp" alt="Bangkok street food" loading="lazy"/></a><div class="map-pin">&#127829; Street Food</div><div class="photo-caption"><a href="https://www.google.com/maps/search/Yaowarat+Street+Food+Bangkok" target="_blank" style="color:var(--n-navy,#003366)">Bangkok street food &rarr;</a></div></div>
+        <div class="photo-wrap"><a href="https://www.google.com/maps/search/Wat+Arun+Bangkok" target="_blank" class="photo-link"><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161451997-Wat-Arun.jpg" alt="Wat Arun" loading="lazy"/></a><div class="map-pin">&#127983; Temple</div><div class="photo-caption"><a href="https://www.google.com/maps/search/Wat+Arun+Bangkok" target="_blank" style="color:var(--n-navy,#003366)">Wat Arun &mdash; Temple of Dawn &rarr;</a></div></div>
+        <div class="photo-wrap"><a href="https://www.google.com/maps/search/Sukhumvit+Bangkok" target="_blank" class="photo-link"><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161456560-Spirited-Puddle-Jumper-blog-post-images-2025-03-06T091757.968.png" alt="Bangkok skyline" loading="lazy"/></a><div class="map-pin">&#127749; Skyline</div><div class="photo-caption"><a href="https://www.google.com/maps/search/Sukhumvit+Bangkok" target="_blank" style="color:var(--n-navy,#003366)">Bangkok skyline &rarr;</a></div></div>
       </div>
     </div>
     <div class="travel-section">
       <h3>&#127968; Hotel Details</h3>
       <ul class="info-list">
-        <li><strong>Hotel</strong> NH Bangkok Boulevard Sukhumvit</li>
-        <li><strong>Website</strong><a href="https://world.nh-hotels.com/en/nh-bangkok-sukhumvit-boulevard" target="_blank" style="color:var(--n-navy,#003366);font-weight:600">world.nh-hotels.com &#8594;</a></li>
+        <li><strong>Hotel</strong> <a href="https://www.google.com/maps/search/NH+Bangkok+Boulevard+Sukhumvit,+Bangkok" target="_blank">NH Bangkok Boulevard Sukhumvit</a></li>
+        <li><strong>Address</strong> Sukhumvit Soi 5, Khlong Toei Nuea, Watthana, Bangkok 10110, Thailand</li>
+        <li><strong>Website</strong> <a href="https://world.nh-hotels.com/en/nh-bangkok-sukhumvit-boulevard" target="_blank">world.nh-hotels.com &rarr;</a></li>
         <li><strong>Check-in</strong> April 27, 2026 &mdash; from 3:00 PM</li>
-        <li><strong>Check-out</strong> April 30, 2026 &mdash; by 12:00 PM</li>
+        <li><strong>Check-out</strong> April 30, 2026 &mdash; by 11:00 AM</li>
         <li><strong>Room type</strong> Twin-sharing (roommate preferences collected)</li>
-        <li><strong>Early arrivals</strong> US guests joining from April 26 have rooms arranged</li>
       </ul>
     </div>
     <div class="travel-section">
       <h3>&#128205; Location</h3>
-      <p style="font-size:.875rem;color:#666;margin-bottom:1rem;line-height:1.7">The hotel is in the Sukhumvit area &mdash; one of Bangkok&rsquo;s most central neighbourhoods, close to the BTS Skytrain, major malls, restaurants, and key city attractions.</p>
+      <p style="font-size:.875rem;color:#666;margin-bottom:1rem;line-height:1.7">The hotel is in the Sukhumvit area &mdash; one of Bangkok&rsquo;s most central neighbourhoods, close to the BTS Skytrain, major malls, restaurants, and city attractions.</p>
       <ul class="info-list">
-        <li><strong>Nearest BTS</strong> Asok / Sukhumvit BTS Station</li>
-        <li><strong>From Airport</strong> ~45 min from Suvarnabhumi (BKK) by taxi or Airport Rail Link</li>
-        <li><strong>Nearby</strong> Terminal 21 Mall, Asok Junction, dining &amp; nightlife</li>
+        <li><strong>Nearest BTS</strong> <a href="https://www.google.com/maps/search/Asok+BTS+Station+Bangkok" target="_blank">Asok / Sukhumvit BTS Station</a></li>
+        <li><strong>From Airport</strong> ~45 min from <a href="https://www.google.com/maps/search/Suvarnabhumi+Airport+Bangkok" target="_blank">Suvarnabhumi (BKK)</a> by Grab or taxi</li>
+        <li><strong>Nearby</strong> <a href="https://www.google.com/maps/search/Terminal+21+Bangkok" target="_blank">Terminal 21 Mall</a>, Asok Junction, dining &amp; nightlife</li>
       </ul>
     </div>
     <div class="travel-section">
@@ -310,8 +284,9 @@
       <ul class="info-list">
         <li><strong>April 27 (evening)</strong> Welcome dinner at the hotel</li>
         <li><strong>April 28, 29, 30</strong> Breakfast at the hotel each morning</li>
-        <li><strong>April 28 (evening)</strong> Pinnacle Awards dinner at the hotel</li>
-        <li><strong>April 29 (evening)</strong> Dinner outside at venue &ldquo;Escape&rdquo;</li>
+        <li><strong>April 28 &amp; 29 (lunch)</strong> Lunch at the hotel &middot; 1:00&ndash;3:00 PM</li>
+        <li><strong>April 28 (evening)</strong> <a href="https://www.google.com/maps/search/Tony's+Restaurant+Bangkok+Sukhumvit" target="_blank">Dinner at Tony&rsquo;s</a> &mdash; pizza &amp; beer night &#127829;&#127866;</li>
+        <li><strong>April 29 (evening)</strong> <a href="https://www.google.com/maps/search/Escape+Bangkok" target="_blank">Dinner at Escape</a> &#127882;</li>
       </ul>
     </div>
   </div>
@@ -322,70 +297,14 @@
   <div class="content">
     <h2 class="section-title">Packing List</h2>
     <p class="section-sub">Bangkok in April is hot and humid (33&ndash;38&deg;C). Pack light &mdash; and don&rsquo;t forget the essentials below.</p>
-    <div class="alert-box alert-warn" style="margin-bottom:2rem">
-      <div class="alert-icon">&#127777;&#65039;</div>
-      <div><strong>Bangkok Weather in April:</strong> Expect 33&ndash;38&deg;C (91&ndash;100&deg;F) with high humidity. Stay hydrated, wear breathable fabrics, and apply sunscreen. Conference rooms will be heavily air-conditioned &mdash; bring a light layer.</div>
-    </div>
+    <div class="alert-box alert-warn" style="margin-bottom:2rem"><div class="alert-icon">&#127777;</div><div><strong>Bangkok Weather in April:</strong> Expect 33&ndash;38&deg;C (91&ndash;100&deg;F) with high humidity. Stay hydrated, wear breathable fabrics, and apply sunscreen.</div></div>
     <div class="packing-grid">
-      <div class="packing-card">
-        <h3>&#128196; Documents</h3>
-        <ul>
-          <li>Passport (valid 6+ months from April 27)</li>
-          <li>TDAC confirmation (downloaded / printed)</li>
-          <li>Outbound + return flight tickets</li>
-          <li>Hotel confirmation</li>
-          <li>Travel insurance (if applicable)</li>
-        </ul>
-      </div>
-      <div class="packing-card">
-        <h3>&#128084; Clothing</h3>
-        <ul>
-          <li>Light, breathable clothing (cotton / linen)</li>
-          <li>Smart casual for daily sessions</li>
-          <li>Formal / semi-formal for Pinnacle Awards night</li>
-          <li>Comfortable walking shoes (city tour)</li>
-          <li>Flip flops / sandals</li>
-          <li>Light jacket for air-conditioned rooms</li>
-          <li>Swimwear (hotel pool)</li>
-        </ul>
-      </div>
-      <div class="packing-card">
-        <h3>&#9728;&#65039; Health &amp; Essentials</h3>
-        <ul>
-          <li>Sunscreen SPF&nbsp;50+</li>
-          <li>Insect repellent</li>
-          <li>Personal medications</li>
-          <li>Hand sanitizer</li>
-          <li>Reusable water bottle</li>
-          <li>Dietary restrictions noted (share with Kirti)</li>
-        </ul>
-      </div>
-      <div class="packing-card">
-        <h3>&#128268; Tech &amp; Accessories</h3>
-        <ul>
-          <li>Phone charger + power bank</li>
-          <li>Universal adapter (Thailand: Type A / B / C)</li>
-          <li>Laptop + work essentials</li>
-          <li>Earphones</li>
-        </ul>
-      </div>
-      <div class="packing-card">
-        <h3>&#128176; Money</h3>
-        <ul>
-          <li>Thai Baht (THB) &mdash; exchange at airport / ATM</li>
-          <li>Credit / debit card (widely accepted)</li>
-          <li>Some cash for street food &amp; markets</li>
-        </ul>
-      </div>
-      <div class="packing-card">
-        <h3>&#10024; Nice to Have</h3>
-        <ul>
-          <li>Portable mini fan / cooling mist spray</li>
-          <li>Camera for the city tour</li>
-          <li>A good book for the flight</li>
-          <li>Sense of adventure &#128512;</li>
-        </ul>
-      </div>
+      <div class="packing-card"><h3>&#128196; Documents</h3><ul><li>Passport (valid 6+ months from April 27)</li><li>TDAC confirmation (downloaded / printed)</li><li>Outbound flight ticket</li><li>Hotel confirmation</li><li>Travel insurance (if applicable)</li></ul></div>
+      <div class="packing-card"><h3>&#128084; Clothing</h3><ul><li>Light, breathable clothing (cotton / linen)</li><li>Smart casual for daily sessions</li><li>Comfortable walking shoes (city tour)</li><li>Flip flops / sandals</li><li>Swimwear (hotel pool)</li></ul></div>
+      <div class="packing-card"><h3>&#9728; Health &amp; Essentials</h3><ul><li>Sunscreen SPF&nbsp;50+</li><li>Insect repellent</li><li>Personal medications</li><li>Hand sanitizer</li><li>Reusable water bottle</li><li>Good to be aware of any food allergies you may have</li></ul></div>
+      <div class="packing-card"><h3>&#128268; Tech &amp; Accessories</h3><ul><li>Phone charger + power bank</li><li>Universal adapter (Thailand: Type A / B / C)</li><li>Laptop + work essentials</li><li>Earphones</li></ul></div>
+      <div class="packing-card"><h3>&#128176; Money</h3><ul><li>4,000&ndash;5,000 THB in cash &mdash; get at airport or arrange before travel</li><li>Credit / debit card (widely accepted)</li><li>Some extra cash for street food &amp; markets</li></ul></div>
+      <div class="packing-card"><h3>&#10024; Nice to Have</h3><ul><li>Portable mini fan / cooling mist spray</li><li>Camera for the city tour</li><li>A good book for the flight</li><li>Sense of adventure &#128512;</li></ul></div>
     </div>
   </div>
 </div>
@@ -395,24 +314,22 @@
   <div class="content">
     <h2 class="section-title">FAQs</h2>
     <p class="section-sub">Common questions about the Bangkok offsite</p>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do I need a visa to enter Thailand? <span class="arrow">&#9660;</span></div><div class="faq-a">Indian nationals can enter Thailand <strong>visa-free for up to 30 days</strong> under the 2024 policy update. Make sure your passport is valid for at least 6 months from April 27, 2026.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the TDAC form and do I need to fill it? <span class="arrow">&#9660;</span></div><div class="faq-a">Yes &mdash; the <strong>Thailand Digital Arrival Card (TDAC)</strong> is mandatory for all visitors. Fill it at <a href="https://tdac.immigration.go.th/arrival-card/#/tac/arrival-card/add" target="_blank">tdac.immigration.go.th</a> after booking your flight. Details must match your passport exactly. Download or print your confirmation for arrival.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I book my flights? <span class="arrow">&#9660;</span></div><div class="faq-a">Book your own flights &mdash; outbound from any Indian city to Bangkok, return from Bangkok on April 30. Recommended: Air India Express IX&nbsp;882 (10:00 AM IST &rarr; ~4:00 PM BKK). Budget: INR 30,000&ndash;31,000 round trip. Reimbursements processed in batch around April&nbsp;20.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Who coordinates airport pickup? <span class="arrow">&#9660;</span></div><div class="faq-a">Airport pickup is arranged by <strong>Kirti</strong>. Share your exact arrival time and terminal with her on Slack so she can coordinate the group transfer from Suvarnabhumi.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What are the room arrangements? <span class="arrow">&#9660;</span></div><div class="faq-a">Rooms are twin-sharing. Roommate preferences were collected in advance. Reach out to Kirti on Slack if you have any questions about your room assignment.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What should I wear to the Pinnacle Awards ceremony? <span class="arrow">&#9660;</span></div><div class="faq-a">The Pinnacle Awards is a celebratory evening. <strong>Smart-formal or semi-formal attire</strong> is recommended &mdash; button-down shirts, blazers, or similar. More details will be shared closer to the date.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the weather like in Bangkok in April? <span class="arrow">&#9660;</span></div><div class="faq-a">Very hot and humid &mdash; expect 33&ndash;38&deg;C (91&ndash;100&deg;F). Pack light, breathable clothing and sunscreen. Meeting rooms will be air-conditioned, so a light layer is handy.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What currency should I carry? <span class="arrow">&#9660;</span></div><div class="faq-a">Thai Baht (THB). Exchange at the airport or use an ATM. Credit cards are widely accepted at hotels, malls, and restaurants. Keep some cash for street food and markets.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Will there be vegetarian / dietary options? <span class="arrow">&#9660;</span></div><div class="faq-a">Yes &mdash; Thai cuisine is very accommodating. Please share any dietary restrictions or allergies with <strong>Kirti or Varsha</strong> in advance.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the Bangkok Miles pin? <span class="arrow">&#9660;</span></div><div class="faq-a">The <strong>Bangkok Miles pin</strong> is an exclusive commemorative badge given only to offsite attendees &mdash; a keepsake of our time in Thailand. Separate anniversary pins will also be distributed; Kirti and Varsha will bring extras back for India team members who couldn&rsquo;t attend.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Who do I contact for questions? <span class="arrow">&#9660;</span></div><div class="faq-a"><strong>Logistics</strong> (flights, hotel, rooms, pickup): Kirti on Slack<br/><strong>Sessions &amp; agenda</strong>: Varsha on Slack<br/><strong>Channel</strong>: <strong>#india-apr-offsite-2026</strong> for all updates</div></div>
+    <div class="faq-item"><p class="faq-q">Do I need a visa to enter Thailand?</p><p class="faq-a">Indian nationals can enter Thailand <strong>visa-free for up to 30 days</strong> under the 2024 policy update. Make sure your passport is valid for at least 6 months from April 27, 2026.</p></div>
+    <div class="faq-item"><p class="faq-q">What is the TDAC form and do I need to fill it?</p><p class="faq-a">Yes &mdash; the <strong>Thailand Digital Arrival Card (TDAC)</strong> is mandatory for all visitors. Fill it at <a href="https://tdac.immigration.go.th/arrival-card/#/tac/arrival-card/add" target="_blank">tdac.immigration.go.th</a> after booking your flight. Details must match your passport exactly. Download or print your confirmation for arrival.</p></div>
+    <div class="faq-item"><p class="faq-q">How do I book my flights?</p><p class="faq-a">Book your own outbound flights from any Indian city to Bangkok. Return flights are fully flexible &mdash; no specific city or date required. Feel free to plan onward travel after the offsite if you&rsquo;d like! Aim to arrive in the afternoon on April 27 to check in before the welcome dinner.</p></div>
+    <div class="faq-item"><p class="faq-q">How do I get from the airport to the hotel?</p><p class="faq-a">Please <strong>book your own transfer</strong> from the airport. Options include <a href="https://www.grab.com" target="_blank">Grab</a> (highly recommended), metered taxis, or prebooking a cab. You can use your <strong>monthly commuter budget</strong> for this. The journey from <a href="https://www.google.com/maps/search/Suvarnabhumi+Airport+Bangkok" target="_blank">Suvarnabhumi Airport (BKK)</a> to <a href="https://www.google.com/maps/search/NH+Bangkok+Boulevard+Sukhumvit,+Bangkok" target="_blank">NH Bangkok Boulevard Sukhumvit</a> is approximately 45 minutes.</p></div>
+    <div class="faq-item"><p class="faq-q">What are the room arrangements?</p><p class="faq-a">Rooms are twin-sharing. Roommate preferences were collected in advance. Reach out to the People Ops team if you have any questions about your room assignment.</p></div>
+    <div class="faq-item"><p class="faq-q">What is the weather like in Bangkok in April?</p><p class="faq-a">Very hot and humid &mdash; expect 33&ndash;38&deg;C (91&ndash;100&deg;F). Pack light, breathable clothing and sunscreen.</p></div>
+    <div class="faq-item"><p class="faq-q">What currency should I carry?</p><p class="faq-a">Thai Baht (THB). Carry <strong>4,000&ndash;5,000 THB in cash</strong> &mdash; exchange at the airport or arrange before travel. Credit cards are widely accepted at hotels, malls, and restaurants.</p></div>
+    <div class="faq-item"><p class="faq-q">Will there be vegetarian / dietary options?</p><p class="faq-a">Thai cuisine accommodates a wide range of dietary preferences. It&rsquo;s good to be aware of any food allergies you may have, especially when eating out during the city tour or at dinners.</p></div>
+    <div class="faq-item"><p class="faq-q">Who do I contact for questions?</p><p class="faq-a">Reach out to the <strong>People Ops team &mdash; Kirti or Varsha</strong> for any questions about the offsite.</p></div>
   </div>
 </div>
 
 <footer>
-  <p><strong>India Offsite 2026 &middot; Bangkok, Thailand</strong></p>
-  <p>April 27&ndash;30 &middot; NH Bangkok Boulevard Sukhumvit</p>
-  <p style="margin-top:.5rem">Questions? Reach out to Kirti or Varsha on Slack &middot; #india-apr-offsite-2026</p>
+  <p><strong>Nirvana India Offsite April 2026 &middot; Bangkok, Thailand</strong></p>
+  <p>April 27&ndash;30 &middot; <a href="https://www.google.com/maps/search/NH+Bangkok+Boulevard+Sukhumvit,+Bangkok" target="_blank">NH Bangkok Boulevard Sukhumvit</a>, Sukhumvit Soi 5, Watthana, Bangkok 10110</p>
+  <p style="margin-top:.5rem">Questions? Reach out to the People Ops team &mdash; Kirti or Varsha</p>
 </footer>
 
 <script>
@@ -422,13 +339,6 @@ function showPage(name){
   document.getElementById('page-'+name).classList.add('active');
   document.getElementById('tab-'+name).classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
-}
-function toggleFaq(el){
-  var answer=el.nextElementSibling;
-  var isOpen=answer.classList.contains('open');
-  document.querySelectorAll('.faq-q').forEach(function(q){q.classList.remove('open')});
-  document.querySelectorAll('.faq-a').forEach(function(a){a.classList.remove('open')});
-  if(!isOpen){el.classList.add('open');answer.classList.add('open');}
 }
 </script>
 </body>
