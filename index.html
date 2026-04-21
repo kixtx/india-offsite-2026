@@ -11,6 +11,7 @@
     .site-header{background:var(--n-dark-navy,#040C21);color:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.35)}
     .site-header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:62px;padding:0 1.5rem}
     .site-title{font-size:1rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:.6rem;cursor:pointer;text-decoration:none}
+    .site-logo{height:28px;display:block;filter:brightness(0) invert(1)}
     .nav-tabs{display:flex;list-style:none;height:62px;margin:0;padding:0}
     .nav-tabs a{display:flex;align-items:center;height:100%;padding:0 1.1rem;color:rgba(255,255,255,.7);text-decoration:none;font-size:.82rem;font-weight:500;border-bottom:3px solid transparent;transition:all .2s;cursor:pointer;white-space:nowrap}
     .nav-tabs a:hover,.nav-tabs a.active{color:var(--n-yellow,#F9AE39);border-bottom-color:var(--n-yellow,#F9AE39);background:rgba(255,255,255,.04)}
@@ -97,9 +98,11 @@
     footer p+p{margin-top:.4rem}
     @media(max-width:768px){
       .hero h1{font-size:2.2rem}
-      .site-header-inner{flex-wrap:wrap;height:auto;padding:.5rem 1rem;gap:.25rem}
-      .nav-tabs{overflow-x:auto;width:100%}
-      .nav-tabs a{padding:0 .75rem;font-size:.78rem}
+      .site-header-inner{flex-direction:column;height:auto;padding:.6rem 1rem .0rem;gap:0;align-items:flex-start}
+      .site-title{padding:.2rem 0}
+      .nav-tabs{overflow-x:auto;width:100%;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-shrink:0}
+      .nav-tabs::-webkit-scrollbar{display:none}
+      .nav-tabs a{padding:0 .7rem;font-size:.75rem;white-space:nowrap;flex-shrink:0}
       .content{padding:1.75rem 1rem}
       .venue-visual{grid-template-columns:1fr}
       .photo-grid-4{grid-template-columns:1fr 1fr}
@@ -110,13 +113,14 @@
 
 <header class="site-header">
   <div class="site-header-inner">
-    <a class="site-title" onclick="showPage('home')">&#127481;&#127469; Nirvana India Offsite April 2026</a>
+    <a class="site-title" onclick="showPage('home')">&#127481;&#127469; India Offsite April 2026</a>
     <nav><ul class="nav-tabs">
       <li><a id="tab-home" class="active" onclick="showPage('home')">Home</a></li>
       <li><a id="tab-schedule" onclick="showPage('schedule')">Schedule</a></li>
       <li><a id="tab-travel" onclick="showPage('travel')">Travel Info</a></li>
       <li><a id="tab-venue" onclick="showPage('venue')">Venue</a></li>
       <li><a id="tab-packing" onclick="showPage('packing')">Packing List</a></li>
+      <li><a id="tab-confirmation" onclick="showPage('confirmation')">Hotel Confirmation</a></li>
       <li><a id="tab-faq" onclick="showPage('faq')">FAQs</a></li>
     </ul></nav>
   </div>
@@ -168,26 +172,27 @@
       <div class="day-events">
         <div class="event-item"><div class="event-time">Afternoon</div><div><div class="event-name">Arrive <a href="https://www.google.com/maps/search/Suvarnabhumi+Airport+Bangkok" target="_blank">Bangkok (BKK)</a></div><div class="event-desc">Suvarnabhumi International Airport &middot; Self-book your Grab / cab to the hotel</div></div></div>
         <div class="event-item"><div class="event-time">3:00 PM+</div><div><div class="event-name">Hotel Check-in</div><div class="event-desc"><a href="https://www.google.com/maps/search/NH+Bangkok+Boulevard+Sukhumvit,+Bangkok" target="_blank">NH Bangkok Boulevard Sukhumvit</a>, Sukhumvit Soi 5, Khlong Toei Nuea, Watthana, Bangkok 10110 &middot; Twin-sharing rooms</div></div></div>
-        <div class="event-item"><div class="event-time">Evening</div><div><div class="event-name">Welcome Dinner</div><div class="event-desc">At the hotel property &middot; Small activity after dinner</div></div></div>
+        <div class="event-item"><div class="event-time">Evening</div><div><div class="event-name">Welcome Dinner</div><div class="event-desc">At the hotel property</div></div></div>
       </div>
     </div>
     <div class="day-block">
       <div class="day-header"><div><div class="dnum">Day 2</div><div class="dname">Tuesday, April 28</div><div class="ddate">Sessions Day</div></div><div class="day-theme">&#128161; Sessions + Pizza &amp; Beer</div></div>
       <div class="day-events">
         <div class="event-item"><div class="event-time">8:00 AM</div><div><div class="event-name">Breakfast</div></div></div>
-        <div class="event-item"><div class="event-time">9:45 AM</div><div><div class="event-name">Morning Sessions Block</div><div class="event-desc">Strategy deep dives &middot; Knowledge sharing &middot; Cross-team workshops</div></div></div>
-        <div class="event-item"><div class="event-time">1:00&ndash;3:00 PM</div><div><div class="event-name">Lunch at the Hotel</div></div></div>
-        <div class="event-item"><div class="event-time">3:00 PM</div><div><div class="event-name">Afternoon Sessions + Team Building</div><div class="event-desc">Interactive sessions &middot; Team building activity</div></div></div>
+        <div class="event-item"><div class="event-time">9:45 AM</div><div><div class="event-name">Morning Sessions Block</div><div class="event-desc">Strategy deep dives &middot; Knowledge sharing</div></div></div>
+        <div class="event-item"><div class="event-time">12:00&ndash;1:00 PM</div><div><div class="event-name">Team Building</div></div></div>
+        <div class="event-item"><div class="event-time">1:00&ndash;2:30 PM</div><div><div class="event-name">Lunch at the Hotel</div></div></div>
+        <div class="event-item"><div class="event-time">2:30 PM</div><div><div class="event-name">Afternoon Sessions</div><div class="event-desc">Interactive sessions &middot; Cross-team workshops</div></div></div>
         <div class="event-item" style="align-items:flex-start"><div class="event-time" style="padding-top:.7rem;color:#7a3500">Evening</div><div class="event-hl"><div class="event-name">&#127829;&#127866; Dinner at <a href="https://www.google.com/maps/search/Tony's+Restaurant+Bangkok+Sukhumvit" target="_blank">Tony&rsquo;s</a></div><div class="event-desc">Pizza &amp; beer night</div></div></div>
       </div>
     </div>
     <div class="day-block">
-      <div class="day-header"><div><div class="dnum">Day 3</div><div class="dname">Wednesday, April 29</div><div class="ddate">City Exploration Day</div></div><div class="day-theme">&#128506; Sessions + City Exploration</div></div>
+      <div class="day-header"><div><div class="dnum">Day 3</div><div class="dname">Wednesday, April 29</div><div class="ddate">Sessions + City Explore</div></div><div class="day-theme">&#128506; Sessions + City Explore</div></div>
       <div class="day-events">
         <div class="event-item"><div class="event-time">8:00 AM</div><div><div class="event-name">Breakfast</div></div></div>
         <div class="event-item"><div class="event-time">9:45 AM</div><div><div class="event-name">Morning Sessions Block</div><div class="event-desc">Strategy &amp; knowledge sharing sessions continue</div></div></div>
-        <div class="event-item"><div class="event-time">1:00&ndash;3:00 PM</div><div><div class="event-name">Lunch at the Hotel</div></div></div>
-        <div class="event-item"><div class="event-time">3:00 PM</div><div><div class="event-name">Bangkok City Tour</div><div class="event-desc"><a href="https://www.google.com/maps/search/Wat+Arun+Bangkok" target="_blank">Wat Arun</a> &middot; <a href="https://www.google.com/maps/search/Yaowarat+Chinatown+Bangkok" target="_blank">Chinatown (Yaowarat)</a> &middot; <a href="https://www.google.com/maps/search/Grand+Palace+Bangkok" target="_blank">Grand Palace</a></div></div></div>
+        <div class="event-item"><div class="event-time">1:00&ndash;2:30 PM</div><div><div class="event-name">Lunch at the Hotel</div></div></div>
+        <div class="event-item"><div class="event-time">3:30 PM</div><div><div class="event-name">Bangkok City Tour</div><div class="event-desc">To be updated</div></div></div>
         <div class="event-item" style="align-items:flex-start"><div class="event-time" style="padding-top:.7rem;color:#7a3500">Evening</div><div class="event-hl"><div class="event-name">&#127882; Dinner at <a href="https://www.google.com/maps/search/Escape+Bangkok" target="_blank">Escape</a></div><div class="event-desc">Private venue &middot; Food, live music &amp; great vibes</div></div></div>
       </div>
     </div>
@@ -216,12 +221,12 @@
         <li><strong>What to bring</strong> Save confirmation on phone + print a copy</li>
       </ul>
     </div>
-    <div class="travel-section"><h3>&#128706; Visa</h3><div class="alert-box alert-ok"><div class="alert-icon">&#9989;</div><div><strong>Indian nationals enter Thailand visa-free for up to 30 days</strong> (updated 2024 policy). Ensure your passport is valid for at least 6 months from April 27, 2026.</div></div></div>
+    <div class="travel-section"><h3>&#128706; Visa</h3><div class="alert-box alert-ok"><div class="alert-icon">&#9989;</div><div><strong>Indian nationals enter Thailand visa-free for up to 30 days.</strong> Ensure your passport is valid for at least 6 months from April 27, 2026.</div></div></div>
     <div class="travel-section">
       <h3>&#128663; Getting to the Hotel</h3>
       <div class="alert-box alert-info" style="margin-bottom:1rem"><div class="alert-icon">&#128661;</div><div>Please arrange your own transfer from the airport. You can use your <strong>monthly commuter budget</strong> for this.</div></div>
       <ul class="info-list">
-        <li><strong>Options</strong> <a href="https://www.grab.com" target="_blank">Grab</a> (app-based), metered taxi, or prebook a cab</li>
+        <li><strong>Options</strong> <a href="https://grab.onelink.me/2695613898/7g87lv6k" target="_blank">Grab</a> (download app &mdash; iPhone &amp; Android), metered taxi, or prebook a cab</li>
         <li><strong>Airport</strong> <a href="https://www.google.com/maps/search/Suvarnabhumi+Airport+Bangkok" target="_blank">Suvarnabhumi International Airport (BKK)</a></li>
         <li><strong>Journey time</strong> ~45 min to Sukhumvit depending on traffic</li>
         <li><strong>Hotel</strong> <a href="https://www.google.com/maps/search/NH+Bangkok+Boulevard+Sukhumvit,+Bangkok" target="_blank">NH Bangkok Boulevard Sukhumvit</a>, Sukhumvit Soi 5, Khlong Toei Nuea, Watthana, Bangkok 10110</li>
@@ -251,12 +256,12 @@
       </div>
     </div>
     <div class="travel-section">
-      <h3>&#127749; Bangkok — Places to Explore</h3>
+      <h3>&#127749; Bangkok in Pictures</h3>
       <div class="photo-grid-4">
-        <div class="photo-wrap"><a href="https://www.google.com/maps/search/Yaowarat+Chinatown+Bangkok" target="_blank" class="photo-link"><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161460323-bangkok_chinatown_blog-001.jpg" alt="Bangkok Chinatown" loading="lazy"/></a><div class="map-pin">&#128205; Chinatown</div><div class="photo-caption"><a href="https://www.google.com/maps/search/Yaowarat+Chinatown+Bangkok" target="_blank" style="color:var(--n-navy,#003366)">Bangkok Chinatown (Yaowarat) &rarr;</a></div></div>
-        <div class="photo-wrap"><a href="https://www.google.com/maps/search/Yaowarat+Street+Food+Bangkok" target="_blank" class="photo-link"><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161464959-a-chefs-tour-best-food-tour-bangkok.jpeg.webp" alt="Bangkok street food" loading="lazy"/></a><div class="map-pin">&#127829; Street Food</div><div class="photo-caption"><a href="https://www.google.com/maps/search/Yaowarat+Street+Food+Bangkok" target="_blank" style="color:var(--n-navy,#003366)">Bangkok street food &rarr;</a></div></div>
-        <div class="photo-wrap"><a href="https://www.google.com/maps/search/Wat+Arun+Bangkok" target="_blank" class="photo-link"><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161451997-Wat-Arun.jpg" alt="Wat Arun" loading="lazy"/></a><div class="map-pin">&#127983; Temple</div><div class="photo-caption"><a href="https://www.google.com/maps/search/Wat+Arun+Bangkok" target="_blank" style="color:var(--n-navy,#003366)">Wat Arun &mdash; Temple of Dawn &rarr;</a></div></div>
-        <div class="photo-wrap"><a href="https://www.google.com/maps/search/Sukhumvit+Bangkok" target="_blank" class="photo-link"><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161456560-Spirited-Puddle-Jumper-blog-post-images-2025-03-06T091757.968.png" alt="Bangkok skyline" loading="lazy"/></a><div class="map-pin">&#127749; Skyline</div><div class="photo-caption"><a href="https://www.google.com/maps/search/Sukhumvit+Bangkok" target="_blank" style="color:var(--n-navy,#003366)">Bangkok skyline &rarr;</a></div></div>
+        <div class="photo-wrap"><a class="photo-link"><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161460323-bangkok_chinatown_blog-001.jpg" alt="Bangkok Chinatown" loading="lazy"/></a><div class="map-pin">&#128205; Chinatown</div></div>
+        <div class="photo-wrap"><a class="photo-link"><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161464959-a-chefs-tour-best-food-tour-bangkok.jpeg.webp" alt="Bangkok street food" loading="lazy"/></a><div class="map-pin">&#127829; Street Food</div></div>
+        <div class="photo-wrap"><a class="photo-link"><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161451997-Wat-Arun.jpg" alt="Wat Arun" loading="lazy"/></a><div class="map-pin">&#127983; Temple</div></div>
+        <div class="photo-wrap"><a class="photo-link"><img src="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776161456560-Spirited-Puddle-Jumper-blog-post-images-2025-03-06T091757.968.png" alt="Bangkok skyline" loading="lazy"/></a><div class="map-pin">&#127749; Skyline</div></div>
       </div>
     </div>
     <div class="travel-section">
@@ -284,7 +289,7 @@
       <ul class="info-list">
         <li><strong>April 27 (evening)</strong> Welcome dinner at the hotel</li>
         <li><strong>April 28, 29, 30</strong> Breakfast at the hotel each morning</li>
-        <li><strong>April 28 &amp; 29 (lunch)</strong> Lunch at the hotel &middot; 1:00&ndash;3:00 PM</li>
+        <li><strong>April 28 &amp; 29 (lunch)</strong> Lunch at the hotel &middot; 1:00&ndash;2:30 PM</li>
         <li><strong>April 28 (evening)</strong> <a href="https://www.google.com/maps/search/Tony's+Restaurant+Bangkok+Sukhumvit" target="_blank">Dinner at Tony&rsquo;s</a> &mdash; pizza &amp; beer night &#127829;&#127866;</li>
         <li><strong>April 29 (evening)</strong> <a href="https://www.google.com/maps/search/Escape+Bangkok" target="_blank">Dinner at Escape</a> &#127882;</li>
       </ul>
@@ -300,7 +305,7 @@
     <div class="alert-box alert-warn" style="margin-bottom:2rem"><div class="alert-icon">&#127777;</div><div><strong>Bangkok Weather in April:</strong> Expect 33&ndash;38&deg;C (91&ndash;100&deg;F) with high humidity. Stay hydrated, wear breathable fabrics, and apply sunscreen.</div></div>
     <div class="packing-grid">
       <div class="packing-card"><h3>&#128196; Documents</h3><ul><li>Passport (valid 6+ months from April 27)</li><li>TDAC confirmation (downloaded / printed)</li><li>Outbound flight ticket</li><li>Hotel confirmation</li><li>Travel insurance (if applicable)</li></ul></div>
-      <div class="packing-card"><h3>&#128084; Clothing</h3><ul><li>Light, breathable clothing (cotton / linen)</li><li>Smart casual for daily sessions</li><li>Comfortable walking shoes (city tour)</li><li>Flip flops / sandals</li><li>Swimwear (hotel pool)</li></ul></div>
+      <div class="packing-card"><h3>&#128084; Clothing</h3><ul><li>Light, breathable clothing (cotton / linen)</li><li>Smart casual for daily sessions</li><li>Comfortable walking shoes (city tour)</li><li>Clothing to cover shoulders &amp; knees (required for temple visit)</li><li>Flip flops / sandals</li><li>Swimwear (hotel pool)</li></ul></div>
       <div class="packing-card"><h3>&#9728; Health &amp; Essentials</h3><ul><li>Sunscreen SPF&nbsp;50+</li><li>Insect repellent</li><li>Personal medications</li><li>Hand sanitizer</li><li>Reusable water bottle</li><li>Good to be aware of any food allergies you may have</li></ul></div>
       <div class="packing-card"><h3>&#128268; Tech &amp; Accessories</h3><ul><li>Phone charger + power bank</li><li>Universal adapter (Thailand: Type A / B / C)</li><li>Laptop + work essentials</li><li>Earphones</li></ul></div>
       <div class="packing-card"><h3>&#128176; Money</h3><ul><li>4,000&ndash;5,000 THB in cash &mdash; get at airport or arrange before travel</li><li>Credit / debit card (widely accepted)</li><li>Some extra cash for street food &amp; markets</li></ul></div>
@@ -323,6 +328,151 @@
     <div class="faq-item"><p class="faq-q">What currency should I carry?</p><p class="faq-a">Thai Baht (THB). Carry <strong>4,000&ndash;5,000 THB in cash</strong> &mdash; exchange at the airport or arrange before travel. Credit cards are widely accepted at hotels, malls, and restaurants.</p></div>
     <div class="faq-item"><p class="faq-q">Will there be vegetarian / dietary options?</p><p class="faq-a">Thai cuisine accommodates a wide range of dietary preferences. It&rsquo;s good to be aware of any food allergies you may have, especially when eating out during the city tour or at dinners.</p></div>
     <div class="faq-item"><p class="faq-q">Who do I contact for questions?</p><p class="faq-a">Reach out to the <strong>People Ops team &mdash; Kirti or Varsha</strong> for any questions about the offsite.</p></div>
+  </div>
+</div>
+
+<!-- HOTEL CONFIRMATION -->
+<div id="page-confirmation" class="page">
+  <div class="content">
+    <h2 class="section-title">Hotel Confirmation</h2>
+    <p class="section-sub">Official booking confirmation from NH Bangkok Sukhumvit Boulevard</p>
+
+    <div style="background:linear-gradient(135deg,var(--n-dark-navy,#040C21),#082040);border-radius:20px;padding:3rem 2rem;text-align:center;margin-bottom:2rem;color:#fff">
+      <div style="font-size:3rem;margin-bottom:1rem">📄</div>
+      <h3 style="font-size:1.3rem;font-weight:800;color:var(--n-yellow,#F9AE39);margin-bottom:.5rem">NH Bangkok Boulevard</h3>
+      <p style="opacity:.8;font-size:.9rem;margin-bottom:.4rem">Confirmation #1300752 &middot; 44 Guests &middot; 26 Rooms</p>
+      <p style="opacity:.7;font-size:.85rem;margin-bottom:2rem">April 25–30, 2026 &middot; Superior Room with Breakfast</p>
+      <a href="https://nirvana-blobs.fly.storage.tigris.dev/artifacts/1776762925661-NH%20Boulevard%20-%20Confirmation%20Letter_Enout%20-%20Meeting%20Group%20on%2025%20-%2030%20April%202026_Revised%20(1).pdf" target="_blank" style="display:inline-flex;align-items:center;gap:.6rem;background:var(--n-yellow,#F9AE39);color:var(--n-dark-navy,#040C21);padding:.85rem 2rem;border-radius:10px;font-size:.95rem;font-weight:800;text-decoration:none;margin-bottom:1rem">
+        📂 Open Full Confirmation Letter
+      </a>
+      <p style="opacity:.5;font-size:.75rem;margin-top:.75rem">Opens in a new tab — perfectly readable, ready to show at immigration</p>
+    </div>
+
+    <div class="travel-section">
+      <h3>📋 Key Booking Details</h3>
+      <ul class="info-list">
+        <li><strong>Confirmation No.</strong> 1300752</li>
+        <li><strong>Group</strong> Nirvana Tech — Meeting Group, managed by Enout</li>
+        <li><strong>Room Type</strong> Superior Room with Breakfast</li>
+        <li><strong>Rooms</strong> 26 rooms &middot; 44 guests</li>
+        <li><strong>Check-in</strong> From 27 April 2026 (main group) — from 3:00 PM</li>
+        <li><strong>Check-out</strong> 30 April 2026 — by 11:00 AM</li>
+        <li><strong>Hotel address</strong> 2 Soi Sukhumvit 5 (Lertsin 1), Sukhumvit Road, Bangkok 10110</li>
+        <li><strong>Phone</strong> +66 2 55 2930</li>
+        <li><strong>Email</strong> <a href="mailto:boulevard@nhhotels.com">boulevard@nhhotels.com</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div id="page-confirmation-OLD" class="page" style="display:none!important">
+  <div class="content">
+    <h2 class="section-title">Hotel Confirmation</h2>
+    <p class="section-sub">Official booking confirmation from NH Bangkok Sukhumvit Boulevard</p>
+
+    <div class="travel-section">
+      <h3>📋 Booking Details</h3>
+      <ul class="info-list">
+        <li><strong>Confirmation No.</strong> 1300752</li>
+        <li><strong>Group Name</strong> Nirvana Tech — Meeting Group, managed by Enout</li>
+        <li><strong>Hotel</strong> NH Bangkok Sukhumvit Boulevard</li>
+        <li><strong>Address</strong> 2 Soi Sukhumvit 5 (Lertsin 1), Sukhumvit Road, Klongtoey Nua, Wattana, Bangkok 10110, Thailand</li>
+        <li><strong>Room Type</strong> Superior Room with Breakfast</li>
+        <li><strong>Total Rooms</strong> 26 rooms</li>
+        <li><strong>Total Guests</strong> 44 Adults</li>
+        <li><strong>Contact</strong> T: +66 2 55 2930 &nbsp;|&nbsp; E: <a href="mailto:boulevard@nhhotels.com">boulevard@nhhotels.com</a></li>
+      </ul>
+    </div>
+
+    <div class="travel-section">
+      <h3>📅 Arrival &amp; Departure</h3>
+      <ul class="info-list">
+        <li><strong>25 April 2026</strong> 2 rooms arrive</li>
+        <li><strong>26 April 2026</strong> 3 rooms arrive</li>
+        <li><strong>27 April 2026</strong> 21 rooms arrive</li>
+        <li><strong>30 April 2026</strong> All 26 rooms depart</li>
+        <li><strong>Check-in time</strong> From 3:00 PM</li>
+        <li><strong>Check-out time</strong> By 11:00 AM</li>
+      </ul>
+    </div>
+
+    <div class="alert-box alert-warn" style="margin-bottom:1.5rem">
+      <div class="alert-icon">⚠️</div>
+      <div><strong>Cancellation Policy:</strong> Cancellations less than 7 days before the arrival date will incur a 100% charge. A 100% charge also applies to no-shows or early departure. Late check-out is charged at 50% of the daily rate until 18:00; thereafter, 100% of the daily rate applies.</div>
+    </div>
+
+    <div class="travel-section">
+      <h3>👥 Guest List — 44 Attendees</h3>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:.84rem">
+          <thead>
+            <tr style="background:var(--n-navy,#003366);color:#fff">
+              <th style="padding:.6rem 1rem;text-align:left;font-weight:600;width:48px">#</th>
+              <th style="padding:.6rem 1rem;text-align:left;font-weight:600">Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">1</td><td style="padding:.55rem 1rem">Anand Kumar Singh</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">2</td><td style="padding:.55rem 1rem">Vedant Mamgain</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">3</td><td style="padding:.55rem 1rem">Tushar Agarwal</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">4</td><td style="padding:.55rem 1rem">Abhi Bhardwaz</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">5</td><td style="padding:.55rem 1rem">Saundarya Khatri</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">6</td><td style="padding:.55rem 1rem">Abhinav Sharma</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">7</td><td style="padding:.55rem 1rem">Aman Gupta</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">8</td><td style="padding:.55rem 1rem">Rishi Swami</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">9</td><td style="padding:.55rem 1rem">Abhay Kumar</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">10</td><td style="padding:.55rem 1rem">Kunal Sachdeva</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">11</td><td style="padding:.55rem 1rem">Varsha Debnath</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">12</td><td style="padding:.55rem 1rem">Deexit Sharma</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">13</td><td style="padding:.55rem 1rem">Garvit Gupta</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">14</td><td style="padding:.55rem 1rem">Tanzeem Ahmed</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">15</td><td style="padding:.55rem 1rem">Harsh Goel</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">16</td><td style="padding:.55rem 1rem">Arnab Samrah</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">17</td><td style="padding:.55rem 1rem">Mohit Kumar</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">18</td><td style="padding:.55rem 1rem">Jitesh Kumar Jha</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">19</td><td style="padding:.55rem 1rem">Karan Rahinwal</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">20</td><td style="padding:.55rem 1rem">Pratish Bodhale</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">21</td><td style="padding:.55rem 1rem">Suchhanda Das</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">22</td><td style="padding:.55rem 1rem">Mohit Singh Solanki</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">23</td><td style="padding:.55rem 1rem">Komal Bhadani</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">24</td><td style="padding:.55rem 1rem">Chaudhary Shivam Akhilesh</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">25</td><td style="padding:.55rem 1rem">Tejas Shukla</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">26</td><td style="padding:.55rem 1rem">Smit Shah</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">27</td><td style="padding:.55rem 1rem">Om Krishna</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">28</td><td style="padding:.55rem 1rem">Shubham Gupta</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">29</td><td style="padding:.55rem 1rem">Kirti Soni</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">30</td><td style="padding:.55rem 1rem">Pulkit Khanna</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">31</td><td style="padding:.55rem 1rem">Kajol Nigam</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">32</td><td style="padding:.55rem 1rem">Md Bilal Mansuri</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">33</td><td style="padding:.55rem 1rem">Pranav Sao</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">34</td><td style="padding:.55rem 1rem">Harshit Sharma</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">35</td><td style="padding:.55rem 1rem">Aanchal Sethi</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">36</td><td style="padding:.55rem 1rem">Bala Katam</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">37</td><td style="padding:.55rem 1rem">Ayush Patidar</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">38</td><td style="padding:.55rem 1rem">Sravya Reddy Koppula</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">39</td><td style="padding:.55rem 1rem">Mohammed Shadir Fakri Mohammed</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">40</td><td style="padding:.55rem 1rem">Kartik</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">41</td><td style="padding:.55rem 1rem">Chintan Haresh Goyani</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">42</td><td style="padding:.55rem 1rem">Katie Morrow</td></tr>
+            <tr style="background:#f9fafc"><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">43</td><td style="padding:.55rem 1rem">Noah Karpel</td></tr>
+            <tr><td style="padding:.55rem 1rem;color:#888;font-size:.75rem">44</td><td style="padding:.55rem 1rem">Olivia Cartwright</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="travel-section">
+      <h3>📍 Getting There</h3>
+      <ul class="info-list">
+        <li><strong>From Airport</strong> ~40 min drive from Suvarnabhumi International Airport (BKK)</li>
+        <li><strong>By BTS</strong> 2 min walk from BTS Nana Station (Exit 3)</li>
+        <li><strong>Address</strong> 2 Soi Sukhumvit 5 (Lertsin 1), Sukhumvit Road, Bangkok 10110</li>
+        <li><strong>Phone</strong> +66 2 55 2930</li>
+        <li><strong>Email</strong> <a href="mailto:boulevard@nhhotels.com">boulevard@nhhotels.com</a></li>
+      </ul>
+    </div>
+
   </div>
 </div>
 
